@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="design.css">
+    
+</head>
+<body>
+    <!-- nav bar as seen before -->
+    <header>
+        <nav>
+            <a href="index.html"><h3 class="logo">Acoustic Life</h3></a>
+            
+            <div class="link-container">
+            <a href="contact.html"><p class="links">Contact us</p></a>
+            <a href="about.html"><p class="links">About us</p></a>
+            <a href="mission.html"><p class="links">Our mission</p></a>
+            <!-- link to the saved items page -->
+            <a href="saveForLater.html"><p class="links">Go to Saved Items</p></a>
+            </div>
+    
+            <div class="icons">
+                <a href="https://twitter.com/home"><img id="twitter" src="./Images/twitter-24.png" alt=""></a>
+                <a href="https://www.instagram.com/?hl=en"><img id="instagram" src="./Images/instagram-24.png" alt=""></a>
+                <a href="https://www.facebook.com/"><img id="facebook" src="./Images/facebook-3-24.png" alt=""></a>
+            </div>
+        </nav>
+       </header>
+    
+    <!-- contact us form which takes the users details, thanks them for the message and says we will be in touch -->
+    <main>
+        <div class="contact-form">
+            <form class="form">
+                <p>Want to contact us? <br> Leave your comment here <br> We'll be in touch!</p>
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname"><br>
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" name="email"><br><br>
+                <label for="textarea">Type your message here:</label> <br>
+                <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea> <br>
+                <button type="button" id="contactButton">Submit</button>
+              </form>
+            <img class="envelope" src="./Images/envelope-closed-512.png" alt="">
+        </div>
+        <!-- comment form which takes the users name and comment and dynamically displays them via the displayComment function 
+        using localStorage we ensure these comments remain between refreshes -->
+        <div class ="comment-form">
+            <form id="comment-form">
+                <label for="name">Leave your name: </label><br><br>
+                <input type="text" id="commentName" name="commentName"> 
+                <label for="comment">Leave a comment:</label><br>
+                <textarea id="comment" cols="30" rows="10"></textarea><br>
+                <button type="button" id="commentButton" onclick="displayComment()">Submit</button>
+            </form>
+            <!-- declaring our div with id display-area to be used to insert our comments when written into via js -->
+            <div id="display-area"></div>
+        </div>
+    </main>
+    <script src="contact.js"></script>
+</body>
+</html>

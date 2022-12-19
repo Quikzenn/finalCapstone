@@ -1,0 +1,399 @@
+/* main landing page css */
+* {
+    box-sizing: border-box;
+}
+/* anchor tags by default being underlined, this removes this */
+a {
+    text-decoration: none;
+    color:white;
+}
+/* setting our body element to encompass the viewport width and height, setting the background colour and colour of all text, and no margins */
+body {
+    height: 90vh;
+    width: 100%;
+    background-color: #2E2E46;
+    color: white;
+    margin: 0;
+}
+/* setting the height of the header section containing the nav bar */
+header {
+    height: 10vh;
+}
+/* our social media icons now enlarge when the cursor hovers over them, making the site feel more interactive */
+#twitter:hover {
+    transform: scale(1.3);
+    transition: 0.3s
+}
+
+#instagram:hover {
+    transform: scale(1.3);
+    transition: 0.3s;
+}
+
+#facebook:hover {
+    transform: scale(1.3);
+    transition: 0.3s;
+}
+
+/* our nav section, in which lives our logo, nav links and our social media icons, is given display flex and spaces the content out evenly across the page 
+since some are already in seperate divs, this mean they cluster nicely in their relative sections of the nav space. With some padding to space out the clustered
+elements from each other*/
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 10px;
+    width: 100%;
+}
+/* setting font size of logo and making the logo turn to the sites secondary colour on hover  */
+.logo {
+    font-size:1.5em;
+    cursor: pointer;
+    color:white;
+}
+
+.logo:hover {
+    color:#D35400;
+    transition: 0.2s;
+}
+/* the site is being designed 'mobile-first' for responsiveness, at the lowest screen sizes the link elements will not be present, and perhaps when JS is introduced to the
+site the space left can be replaced by a hamburger menu to bring up those nav elements on click */
+.links {
+    display: none;
+    font-size: 1.3em;
+    margin: 10px 10px;
+}
+/* setting the hover to secondary site colour for the links which will be present throughout its appearance on every page */
+.links:hover {
+    color:#D35400;
+    transition: 0.5s;
+}
+/* giving those same elements a 'pointer' cursor on hover to indicate this is a clickable element */
+nav p:hover {
+    cursor: pointer;
+}
+/* same for the social media icons */
+.icons {
+    cursor: pointer;
+}
+/* giving the individual social media icons some padding */
+.icons img {
+    padding: 5px;
+}
+/* setting the height and width of the main part of the site */
+.main {
+    width: 100%;
+    height: 90vh;
+}
+/* giving the main image on the landing page 100% width */
+.main img {
+    width: 100%;
+}
+/* centering the info elements on the landing page */
+.main p {
+    text-align: center;
+    font-size: 1.4rem;
+}
+/* and the h1 */
+.main h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #D35400;
+}
+/* and h2 */
+.main h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+#like-intro {
+    position: relative;
+    bottom: 45px;
+    left: 350px;
+}
+
+#image-like {
+    margin-left: 400px;
+    margin-top: 50px;
+}
+
+.like-button {
+    width: 50px;
+    height: 23px;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    background-color: #D35400;
+    cursor: pointer;
+}
+
+.like-button:hover {
+    transition: 0.25s;
+    background-color: #af4702;
+} 
+/* creating a colour for span element to easily apply colour to set words*/
+span  {
+    color:#D35400;
+}
+/* using flexbox to position the radio form */
+.radio {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.radio-p {
+    margin-top: 80px;
+}
+
+label {
+    margin-right: 15px;
+}
+
+.button-container {
+    height: 25px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#image-button {
+    margin-left: 25px;
+    margin-top: 50px;
+}
+
+button {
+    cursor: pointer; 
+}
+
+.radio {
+    cursor: pointer;
+}
+
+#radio-button {
+    height: 20px;
+}
+/* making the links visible above a 550px screen size */
+@media screen and (min-width: 550px) {
+    .links {
+        display: inline;
+    }
+}
+/* adjusting the look of the page beyond a 900px screen size */
+@media screen and (min-width: 900px) {
+    .links {
+        font-size: 1.5em;
+    }
+
+    .nav {
+        height: 25vh;
+    }
+
+    .main {
+        height: 75vh;
+    }
+
+   .main img {
+        margin-top: 100px;
+        margin-left: 20px;
+        width: 50%;
+        float: left;
+        border-radius: 50%;
+   }
+
+    .intro{
+        float: right;
+        width: 40%;
+        margin-top: 15%;
+        margin-right: 50px;
+    }
+}
+
+/* About Us page css */
+
+.about-us {
+    margin: auto auto;
+}
+/* applying css grid to the gallery of images to give them a natural layout and responsiveness  */
+.list {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 300px));
+    grid-gap: 28px;
+    
+  }
+  /* styling the info at the top of the page and the captions below the images */
+ .aboutus-h2 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .aboutus-p {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .caption {
+    width: 100%;
+    font-size: 1.1rem;
+    color:#D35400;
+    text-align: center;
+  }
+
+  .subcaption {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+
+  /* Contact Us page css */
+  /* using grid to center the submit form alongside the icon of an envelope */
+  .contact-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+  /* centering the form */
+  .form {
+    margin-top: 100px;
+    text-align: center;
+  }
+
+  .envelope {
+    height: 150px;
+    width: 150px;
+    grid-column-start: 1;
+    margin: 10px auto;
+  }
+
+  #comment {
+   grid-column-start: 2;
+   min-width: 300px;
+  }
+
+  #comment-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  #commentButton {
+    width: 57px;
+    grid-column-start: 2;
+    margin: 10px auto;
+  }
+
+  label {
+    margin-bottom: 10px;
+    grid-column-start: 2;
+    text-align: center;
+  }
+
+  #commentName {
+    margin: auto auto;
+    margin-bottom: 10px;
+    grid-column-start: 2;
+
+  }
+
+  #display-area {
+    margin: auto auto;
+    width: 300px;
+    height: 500px;
+    color: white;
+    text-align: center;
+  }
+
+  #commentValue {
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 10px;
+  }
+
+
+
+@media screen and (min-width: 768px) {
+   .contact-form {
+    display: grid;
+   }
+
+}
+
+/* Our mission page css */
+/* using flexbox to layout the two coloured blocks as per task requirements */
+#blocks {
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+/* defining look and position of blocks */
+.block {
+    text-align: center;
+    height: 500px;
+    width: 600px;
+    background:#606092;
+    border-radius: 20%;
+}
+
+.block-h1 {
+    font-size: 2.2rem;
+}
+
+.block-p {
+    font-size: 1.6rem;
+    margin: auto;
+    width: 500px;
+    
+}
+
+.block-list {
+    font-size: 1.5rem;
+    margin: auto;
+    width: 500px;
+}
+/* styling list elements within second block */
+li {
+    margin-bottom: 20px;
+}
+/* styling table at bottom of page */
+.table-h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+th {
+    font-size: 1.5rem;
+}
+
+td {
+    font-size: 1.2rem;
+    padding: 20px;
+}
+
+ .venue-table {
+        display: flex;
+        justify-content: center;
+    }
+
+/* changing styling of page above 1000px */
+@media screen and (min-width: 1000px) {
+    #blocks {
+        width: 100%;
+        height: 100%;
+        margin-top: 100px;
+        display: flex;
+        flex-direction:row;
+        justify-content: center;
+    }
+    .venue-table {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+

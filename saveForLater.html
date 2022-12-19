@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save for later</title>
+    <link rel="stylesheet" href="saveForLater.css">
+</head>
+<body onload="displaySaved()">
+    <header>
+        <!-- nav section of landing page, containing logo and website links all linking to the websites various pages when clicked -->
+        <nav>
+            <a href="index.html"><h3 class="logo">Acoustic Life</h3></a>
+                
+            <div class="link-container">
+            <a href="contact.html"><p class="links">Contact us</p></a>
+            <a href="about.html"><p class="links">About us</p></a>
+            <a href="mission.html"><p class="links">Our mission</p></a>
+            <a href="saveForLater.html"><p class="links">Go to Saved Items</p></a>
+            </div>
+            <!-- icons for link to external sites, facebook, twitter and facebook. These would be links to the company social media if it existed -->
+            <div class="icons">
+                <a href="https://twitter.com/home"><img id="twitter" src="./Images/twitter-24.png" alt=""></a>
+                <a href="https://www.instagram.com/?hl=en"><img id="instagram" src="./Images/instagram-24.png" alt=""></a>
+                <a href="https://www.facebook.com/"><img id="facebook" src="./Images/facebook-3-24.png" alt=""></a>
+            </div>
+        </nav>
+      </header>
+    
+      <!-- h2 to introduce saved items -->
+    <h2>Your saved items:</h2>
+    <!-- empty div to insert our saved items into in js file -->
+    <div id="div"></div>
+    <!-- linking the js file -->
+    <script src="saveForLater.js"></script>
+</body>
+</html>

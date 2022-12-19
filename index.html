@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acoustic Life</title>
+    <!-- linking the css file -->
+    <link rel="stylesheet" href="design.css">
+    
+</head>
+<body>
+   <header>
+    <!-- nav section of landing page, containing logo and website links all linking to the websites various pages when clicked -->
+    <nav>
+        <a href="index.html"><h3 class="logo">Acoustic Life</h3></a>
+            
+        <div class="link-container">
+        <a href="contact.html"><p class="links">Contact us</p></a>
+        <a href="about.html"><p class="links">About us</p></a>
+        <a href="mission.html"><p class="links">Our mission</p></a>
+        <a href="saveForLater.html"><p class="links">Go to Saved Items</p></a>
+        </div>
+        <!-- icons for link to external sites, facebook, twitter and facebook. These would be links to the company social media if it existed -->
+        <div class="icons">
+            <a href="https://twitter.com/home"><img id="twitter" src="./Images/twitter-24.png" alt=""></a>
+            <a href="https://www.instagram.com/?hl=en"><img id="instagram" src="./Images/instagram-24.png" alt=""></a>
+            <a href="https://www.facebook.com/"><img id="facebook" src="./Images/facebook-3-24.png" alt=""></a>
+        </div>
+    </nav>
+  </header>
+
+  <!-- main section of the landing page, containing the company name, a little bio and a customer quote and like button -->
+   <main class="main">
+    <div class="intro">
+    <h1>Acoustic Life</h1>
+    <h2>Blurring the lines between music and crowd</h2>
+    <p>Working with independent artists to bring them to amazing venues all around the United Kingdom</p>
+    <p><i>"Working with <span>Acoustic Life</span> has changed <b>my life.</b> Being able to easily find great venues in my area means I can focus on what matters - the music."
+    <br> <b>Phil Gallagher, musician</b></i></p><br><br>
+    <button id="like-intro" class="like-button" onclick="myFunction(this)">Like</button>
+
+    <!-- beneath that is a radio submit form to ask which type of customer they are -->
+    <p class="radio-p">Are you a musician or looking to book a musician?</p>
+    <div class="radio">
+        <input type="radio" class="radio" name="age" value="musician">
+        <label for="musician">Musician</label><br>
+        <input type="radio" class="radio" name="age" value="book">
+        <label for="book">Looking to book</label> <br>
+        <button id="radio-button" type="submit">Submit</button>
+    </div>
+    </div>
+    <!-- main landing page image -->
+    <img src="./Images/james-kovin-KR9U2ITgnLw-unsplash.jpg" alt="">
+    <!-- buttons beneath the image, one a like button and one a save for later button to add the image to saved items page when clicked -->
+    <div class="button-container">
+        <button id="image-like" class="like-button" onclick="myFunction(this)">Like</button>
+        <button id="image-button" onclick="displaySaved('./Images/james-kovin-KR9U2ITgnLw-unsplash.jpg')">Save Image for Later</button>
+</div>
+</main>
+<!-- linking the js file -->
+<script src="website.js"></script>
+</body>
+</html> 

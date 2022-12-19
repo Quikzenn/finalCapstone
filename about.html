@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="stylesheet" href="design.css">
+   
+</head>
+<body>
+    <!-- nav bar and links as seen before -->
+    <header>
+        <nav>
+            <a href="index.html"><h3 class="logo">Acoustic Life</h3></a>
+            
+            <div class="link-container">
+            <a href="contact.html"><p class="links">Contact us</p></a>
+            <a href="about.html"><p class="links">About us</p></a>
+            <a href="mission.html"><p class="links">Our mission</p></a>
+            <a href="saveForLater.html"><p class="links">Go to Saved Items</p></a>
+            </div>
+    
+            <div class="icons">
+                <a href="https://twitter.com/home"><img id="twitter" src="./Images/twitter-24.png" alt=""></a>
+                <a href="https://www.instagram.com/?hl=en"><img id="instagram" src="./Images/instagram-24.png" alt=""></a>
+                <a href="https://www.facebook.com/"><img id="facebook" src="./Images/facebook-3-24.png" alt=""></a>
+            </div>
+        </nav>
+       </header>
+    <!-- main section of writing explaining about us -->
+    <section class="about-us">
+        <h2 class="aboutus-h2">At <span>Acoustic Life</span> we are musicians too</h2>
+        <p class="aboutus-p">So we understand what it's like, writing song after song, busking on cold wet nights in city centres, running tables at restaurants just to make ends meet.
+        <br> When exactly do you have the time to venue search and get bookings? <br>
+        <span>That's where we come in</span> <br> Here is one of our clients: 
+        </p>
+    </section>   
+    <!-- gallery of images laid out using css grid, each a picture of a customer with their name and a quote underneath -->
+    <div class="list">
+        <div class="image">
+              <img src="./Images/pexels-andrea-piacquadio-3779672.jpg" alt="">
+              <div class="caption">Thomas Mann</div>
+              <div class="subcaption">"Acoustic life made my dream viable again"</div>
+              <!-- each element has a button which runs the function displaySaved and passes its relative img url as an argument which sends that element 
+              to localStorage to be displayed on the saved items page. We do this for all the images on the page -->
+              <button onclick="displaySaved('./Images/pexels-andrea-piacquadio-3779672.jpg')">Save Image for Later</button>
+              <!-- each image has a like button which switches to say liked when clicked -->
+              <button class="like-button" onclick="myFunction(this)">Like</button>
+        </div>
+
+        <div class="image">
+            <img src="./Images/pexels-mart-production-8107222.jpg" alt="">
+            <div class="caption">Gary Bullini</div>
+            <div class="subcaption">"Wow, what a relief not to have to worry about venues!"</div>
+            <button onclick="displaySaved('./Images/pexels-mart-production-8107222.jpg')">Save Image for Later</button>
+            <button class="like-button" onclick="myFunction(this)">Like</button>
+      </div>
+        
+      <div class="image">
+          <img src="./Images/pexels-dayvison-de-oliveira-silva-6843304.jpg" alt="">
+          <div class="caption">Olivia Granger</div>
+          <div class="subcaption">"So many places I dreamed of playing as a young musician are now in my calendar!"</div>
+          <button onclick="displaySaved('./Images/pexels-dayvison-de-oliveira-silva-6843304.jpg')">Save Image for Later</button>
+          <button class="like-button" onclick="myFunction(this)">Like</button>
+      </div>
+        
+      <div class="image">
+            <img src="./Images/pexels-roy-reyna-1835656.jpg" alt="">
+            <div class="caption">Pete Davidson</div>
+            <div class="subcaption">"Never before have I been able to be so solely focused on the music"</div>
+            <button onclick="displaySaved('./Images/pexels-roy-reyna-1835656.jpg')">Save Image for Later</button>
+            <button class="like-button" onclick="myFunction(this)">Like</button>
+      </div>
+        
+      <div class="image">
+            <img src="./Images/pexels-nappy-936131.jpg" alt="">
+            <div class="caption">Kyle Waller</div>
+            <div class="subcaption">"Who needs tour managers when you have Acoustic Life!"</div>
+            <button onclick="displaySaved('./Images/pexels-nappy-936131.jpg')">Save Image for Later</button>
+            <button class="like-button" onclick="myFunction(this)">Like</button>
+      </div>
+        
+        <div class="image">
+          <img src="./Images/pexels-tim-mossholder-2419535.jpg" alt="">
+          <div class="caption">Bruce Dallas</div>
+          <div class="subcaption">"No more sleepless nights wondering where the next gig is at, thanks Acoustic Life!"</div>
+          <button onclick="displaySaved('./Images/pexels-tim-mossholder-2419535.jpg')">Save Image for Later</button>
+          <button class="like-button" onclick="myFunction(this)">Like</button>
+      </div>
+        
+      <div class="image">
+            <img src="./Images/pexels-rodrigo-souza-2531551.jpg" alt="">
+            <div class="caption">Rodrigo Souza</div>
+            <div class="subcaption">"Moving to the UK as a freelance musician has been a breeze!"</div>
+            <button onclick="displaySaved('./Images/pexels-rodrigo-souza-2531551.jpg')">Save Image for Later</button>
+            <button class="like-button" onclick="myFunction(this)">Like</button>
+      </div>
+        
+      <div class="image">
+            <img src="./Images/pexels-saurav-sen-363905.jpg" alt="">
+            <div class="caption">Enrique Montoya</div>
+            <div class="subcaption">"It's been so nice to share my music with likeminded people"</div>
+            <button onclick="displaySaved('./Images/pexels-saurav-sen-363905.jpg')">Save Image for Later</button>
+            <button class="like-button" onclick="myFunction(this)">Like</button>
+      </div>
+        
+      <div class="image">
+          <img src="./Images/pexels-tima-miroshnichenko-5045943.jpg" alt="">
+          <div class="caption">Tim Mossholder</div>
+          <div class="subcaption">"When it comes to music, what a lifehack this has been!"</div>
+          <button onclick="displaySaved('./Images/pexels-tima-miroshnichenko-5045943.jpg')">Save Image for Later</button>
+          <button class="like-button" onclick="myFunction(this)">Like</button>
+      </div>
+    </div>
+    <!-- linking our js file -->
+    <script src="website.js"></script>
+</body>
+</html>

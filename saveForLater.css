@@ -1,0 +1,98 @@
+/* page has the standard background colour for our sites them and all text is white */
+body {
+    background-color:  #2E2E46; 
+    color: white;
+}
+/* defining the height width and margin of our dynamically displayed saved images */
+.localImage {
+    height: 300px;
+    width: 250px;
+    margin: 25px;
+}
+
+* {
+box-sizing: border-box;
+}
+/* anchor tags by default being underlined, this removes this */
+a {
+    text-decoration: none;
+    color:white;
+}
+/* setting our body element to encompass the viewport width and height, setting the background colour and colour of all text, and no margins */
+body {
+    height: 90vh;
+    width: 100%;
+    background-color: #2E2E46;
+    color: white;
+    margin: 0;
+}
+/* setting the height of the header section containing the nav bar */
+header {
+    height: 10vh;
+}
+/* our social media icons now enlarge when the cursor hovers over them, making the site feel more interactive */
+#twitter:hover {
+    transform: scale(1.3);
+    transition: 0.3s
+}
+
+#instagram:hover {
+    transform: scale(1.3);
+    transition: 0.3s;
+}
+
+#facebook:hover {
+    transform: scale(1.3);
+    transition: 0.3s;
+}
+
+/* our nav section, in which lives our logo, nav links and our social media icons, is given display flex and spaces the content out evenly across the page 
+since some are already in seperate divs, this mean they cluster nicely in their relative sections of the nav space. With some padding to space out the clustered
+elements from each other*/
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 10px;
+    width: 100%;
+}
+/* setting font size of logo and making the logo turn to the sites secondary colour on hover  */
+.logo {
+    font-size:1.5em;
+    cursor: pointer;
+    color:white;
+}
+
+.logo:hover {
+    color:#D35400;
+    transition: 0.2s;
+}
+/* the site is being designed 'mobile-first' for responsiveness, at the lowest screen sizes the link elements will not be present, and perhaps when JS is introduced to the
+site the space left can be replaced by a hamburger menu to bring up those nav elements on click */
+.links {
+    display: inline;
+    font-size: 1.3em;
+    margin: 10px 10px;
+}
+/* setting the hover to secondary site colour for the links which will be present throughout its appearance on every page */
+.links:hover {
+    color:#D35400;
+    transition: 0.5s;
+}
+/* giving those same elements a 'pointer' cursor on hover to indicate this is a clickable element */
+nav p:hover {
+    cursor: pointer;
+}
+/* same for the social media icons */
+.icons {
+    cursor: pointer;
+}
+/* giving the individual social media icons some padding */
+.icons img {
+    padding: 5px;
+}
+
+h2 {
+    text-align: center;
+}
